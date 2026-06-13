@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>四川锐志文化传播有限公司 · 创新视觉科技 · 多媒体视效全案服务</title>
+<meta name="description" content="四川锐志文化传播有限公司是一家以创新视觉科技为核心竞争力的文化创意企业，专注于多媒体视效设计、3D 动画制作及大型文艺演出全案服务。主导世运会、世乒赛、大运会、世界科幻大会等国际级赛事开幕式视效设计。" />
+<meta name="keywords" content="四川锐志,多媒体视效,3D动画,裸眼3D,全息投影,大型演出,开幕视效,舞美设计,世运会,世乒赛,大运会,科幻大会,京剧节,剧目多媒体,电视包装,宣传片,成都" />
+<meta name="author" content="四川锐志文化传播有限公司" />
+<meta name="theme-color" content="#0b0b0d" />
+
+<!-- Open Graph / 社交分享 -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="四川锐志文化传播有限公司 · 创新视觉科技" />
+<meta property="og:description" content="多媒体视效设计 · 3D 动画制作 · 大型文艺演出全案服务。国家级文化项目服务商。" />
+<meta property="og:image" content="assets/cover/hero-main.jpg" />
+<meta property="og:locale" content="zh_CN" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="四川锐志文化传播有限公司" />
+<meta name="twitter:description" content="创新视觉科技 · 多媒体视效 · 大型演出全案服务" />
+<meta name="twitter:image" content="assets/cover/hero-main.jpg" />
+
+<!-- 规范域名（部署后改为你自己的域名） -->
+<link rel="canonical" href="https://ruizhi.pages.dev/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="favicon-256.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0d;
+  --bg-2:#15110a;
+  --bg-3:#1d1810;
+  --gold:#c9a96e;
+  --gold-light:#e8c887;
+  --gold-dim:#8a7048;
+  --text:#e8e0d0;
+  --muted:#8a8472;
+  --line:rgba(201,169,110,.22);
+  --line-strong:rgba(201,169,110,.5);
+  --shadow:0 30px 80px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Noto Sans SC',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,.serif{font-family:'Noto Serif SC',serif;font-weight:700;letter-spacing:.02em}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+.container{max-width:1280px;margin:0 auto;padding:0 32px}
+
+/* 顶部进度条 */
+.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-light),var(--gold-dim));width:0;z-index:9999;box-shadow:0 0 12px var(--gold);transition:width .15s linear}
+
+/* 导航 */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(11,11,13,.85);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+  transition:all .3s
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 40px;max-width:1480px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-mark{height:38px;width:auto;filter:drop-shadow(0 0 12px rgba(201,169,110,.4))}
+.brand-name{font-family:'Noto Serif SC',serif;font-size:18px;font-weight:700;letter-spacing:.15em;color:var(--gold-light)}
+.brand-name small{display:block;font-size:10px;color:var(--muted);letter-spacing:.3em;font-weight:400;margin-top:2px;font-family:'Noto Sans SC'}
+.nav-links{display:flex;gap:36px}
+.nav-links a{font-size:14px;letter-spacing:.12em;color:var(--text);position:relative;padding:6px 0;transition:color .3s}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-links a::after{content:"";position:absolute;left:50%;bottom:0;width:0;height:1px;background:var(--gold-light);transition:all .3s;transform:translateX(-50%)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{padding:8px 22px;border:1px solid var(--gold);border-radius:2px;color:var(--gold-light);font-size:13px;letter-spacing:.15em;transition:all .3s}
+.nav-cta:hover{background:var(--gold);color:var(--bg)}
+
+/* HERO */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:120px 32px 80px;text-align:center;
+  background:
+    radial-gradient(ellipse at 50% 30%,rgba(201,169,110,.15) 0%,transparent 60%),
+    radial-gradient(ellipse at 80% 80%,rgba(138,112,72,.12) 0%,transparent 50%),
+    linear-gradient(180deg,#0b0b0d 0%,#15110a 100%);
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(201,169,110,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,169,110,.04) 1px,transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse at center,#000 30%,transparent 70%);
+  -webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;max-width:1100px;margin:0 auto}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:14px;
+  font-size:13px;letter-spacing:.4em;color:var(--gold);
+  padding:8px 24px;border:1px solid var(--line-strong);border-radius:2px;
+  margin-bottom:36px;
+  opacity:0;animation:fadeUp .8s .2s forwards;
+}
+.hero-eyebrow::before,.hero-eyebrow::after{content:"";width:30px;height:1px;background:var(--gold)}
+.hero-title{
+  font-size:clamp(40px,7vw,84px);font-weight:900;line-height:1.15;
+  background:linear-gradient(180deg,#f4e0b8 0%,#c9a96e 50%,#8a7048 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:28px;
+  opacity:0;animation:fadeUp 1s .4s forwards;
+}
+.hero-sub{font-size:clamp(15px,1.5vw,19px);color:var(--text);letter-spacing:.05em;max-width:780px;margin:0 auto 48px;opacity:0;animation:fadeUp 1s .7s forwards}
+.hero-stats{
+  display:flex;justify-content:center;gap:80px;flex-wrap:wrap;
+  margin-top:60px;
+  opacity:0;animation:fadeUp 1s 1s forwards;
+}
+.stat-num{font-family:'Noto Serif SC',serif;font-size:48px;font-weight:700;background:linear-gradient(180deg,var(--gold-light),var(--gold-dim));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.stat-label{font-size:12px;letter-spacing:.3em;color:var(--muted);margin-top:12px;text-transform:uppercase}
+.hero-scroll{
+  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+  font-size:11px;letter-spacing:.3em;color:var(--gold-dim);
+  opacity:0;animation:fadeUp 1s 1.3s forwards;
+}
+.hero-scroll-line{width:1px;height:50px;background:linear-gradient(180deg,transparent,var(--gold));animation:scrollLine 2s infinite}
+
+/* SECTION 通用 */
+section{padding:140px 0;position:relative}
+.sec-head{text-align:center;margin-bottom:80px}
+.sec-num{font-family:'Noto Serif SC',serif;font-size:14px;letter-spacing:.5em;color:var(--gold);margin-bottom:16px}
+.sec-num::before,.sec-num::after{content:"——";margin:0 14px;color:var(--gold-dim)}
+.sec-title{font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.2;margin-bottom:20px;color:var(--text)}
+.sec-title em{font-style:normal;color:var(--gold-light)}
+.sec-sub{font-size:16px;color:var(--muted);letter-spacing:.05em;max-width:680px;margin:0 auto}
+
+/* ABOUT */
+.about{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+.about-text p{font-size:16px;line-height:2;color:var(--text);margin-bottom:22px}
+.about-text strong{color:var(--gold-light);font-weight:500}
+.about-text .lead{font-size:19px;line-height:1.9;color:var(--gold-light);border-left:2px solid var(--gold);padding-left:24px;margin-bottom:36px;font-family:'Noto Serif SC',serif;font-weight:500}
+.about-cards{display:grid;gap:20px}
+.about-card{
+  padding:32px;border:1px solid var(--line);
+  background:rgba(201,169,110,.03);
+  display:flex;align-items:flex-start;gap:20px;
+  transition:all .4s;position:relative;overflow:hidden;
+}
+.about-card::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-light));transition:width .5s}
+.about-card:hover{border-color:var(--gold);transform:translateY(-4px);background:rgba(201,169,110,.06)}
+.about-card:hover::before{width:100%}
+.about-icon{flex-shrink:0;width:48px;height:48px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-family:'Noto Serif SC',serif;font-size:22px;font-weight:700}
+.about-card h4{font-size:18px;margin-bottom:8px;color:var(--gold-light);font-weight:700}
+.about-card p{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* 业务板块 */
+.biz{background:var(--bg)}
+.biz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.biz-card{
+  padding:48px 36px;
+  background:linear-gradient(180deg,rgba(201,169,110,.04) 0%,transparent 100%);
+  border:1px solid var(--line);
+  position:relative;overflow:hidden;
+  transition:all .5s;
+}
+.biz-card::after{content:"";position:absolute;top:0;right:0;width:60px;height:60px;background:linear-gradient(135deg,transparent 50%,var(--gold-dim) 50%);opacity:.4;transition:all .5s}
+.biz-card:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 20px 60px rgba(201,169,110,.15)}
+.biz-card:hover::after{width:120px;height:120px;opacity:.8}
+.biz-num{font-family:'Noto Serif SC',serif;font-size:14px;color:var(--gold-dim);letter-spacing:.4em;margin-bottom:24px}
+.biz-card h3{font-size:26px;color:var(--gold-light);margin-bottom:16px;font-weight:700}
+.biz-card p{font-size:14.5px;color:var(--muted);line-height:1.8}
+.biz-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.biz-tag{font-size:11px;padding:4px 12px;border:1px solid var(--line);color:var(--gold);letter-spacing:.1em;border-radius:2px}
+
+/* 入场动画 */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(201,169,110,.3)}50%{box-shadow:0 0 40px rgba(201,169,110,.6)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* 响应式 */
+@media(max-width:980px){
+  .nav-links{display:none}
+  .about-grid,.biz-grid{grid-template-columns:1fr;gap:48px}
+  .hero-stats{gap:40px}
+  section{padding:80px 0}
+  .container{padding:0 20px}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/brand/logo-2.png" alt="锐志" class="brand-mark">
+      <div class="brand-name">四川锐志<small>SICHUAN RUIZHI</small></div>
+    </a>
+    <div class="nav-links">
+      <a href="#about">公司简介</a>
+      <a href="#biz">业务板块</a>
+      <a href="#cases">案例展示</a>
+      <a href="#honor">荣誉墙</a>
+      <a href="#contact">联系我们</a>
+    </div>
+    <a class="nav-cta" href="#contact">合作咨询</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">INNOVATIVE VISUAL TECHNOLOGY</div>
+    <h1 class="hero-title">技术重塑艺术边界<br>视效点亮中国舞台</h1>
+    <p class="hero-sub">四川锐志文化传播有限公司 · 以创新视觉科技为核心竞争力的文化创意企业<br>专注于多媒体视效设计、3D 动画制作及大型文艺演出全案服务</p>
+    <div class="hero-stats">
+      <div><div class="stat-num" data-count="20">0</div><div class="stat-label">省市级项目</div></div>
+      <div><div class="stat-num" data-count="50">0</div><div class="stat-label">专业精英团队</div></div>
+      <div><div class="stat-num" data-count="4">0</div><div class="stat-label">国家级奖项</div></div>
+      <div><div class="stat-num" data-count="30">0+</div><div class="stat-label">国际级赛事</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll">SCROLL<div class="hero-scroll-line"></div></div>
+</header>
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-num">ABOUT US</div>
+      <h2 class="sec-title">关于<em>锐志</em></h2>
+      <p class="sec-sub">汇聚影视工业全流程顶尖人才 · 以前沿技术赋能艺术创作</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="lead">四川锐志文化传播有限公司是一家以创新视觉科技为核心竞争力的文化创意企业。</p>
+        <p>公司深耕数字视觉领域，构建了覆盖<strong>"创意策划 - 技术研发 - 执行落地"</strong>的全产业链能力。核心技术包括<strong>裸眼 3D 全息投影、球幕 3D 拓扑建模、动态灯光交互系统</strong>等，在大型演出、舞台剧目、文旅项目中实现多维度视觉突破。</p>
+        <p>作为国家级文化项目服务商，公司主导 2023 年第 81 届世界科幻大会开闭幕式全息视效设计，操刀第 31 届世界大学生运动会火炬传递多媒体工程，连续承接中国京剧节、中国曲艺节开闭幕式视觉创作。</p>
+        <p>公司拥有 <strong>50+</strong> 专业人才团队，配备自主研发的 R&D 测试实验室与全流程品控体系。以"技术重塑艺术边界"为理念，持续推动视觉科技与文化产业深度融合。</p>
+      </div>
+      <div class="about-cards">
+        <div class="about-card reveal reveal-delay-1">
+          <div class="about-icon">壹</div>
+          <div><h4>全产业链能力</h4><p>创意策划 → 技术研发 → 执行落地，覆盖影视工业全流程</p></div>
+        </div>
+        <div class="about-card reveal reveal-delay-2">
+          <div class="about-icon">贰</div>
+          <div><h4>国际级项目经验</h4><p>世运会、世乒赛、大运会、世科幻大会等顶级赛事视效总设计</p></div>
+        </div>
+        <div class="about-card reveal reveal-delay-3">
+          <div class="about-icon">叁</div>
+          <div><h4>50+ 精英团队</h4><p>3D 动画师、影视编导、舞美设计师、播控工程师多元领域</p></div>
+        </div>
+        <div class="about-card reveal reveal-delay-4">
+          <div class="about-icon">肆</div>
+          <div><h4>权威荣誉加持</h4><p>国家级优秀剧目奖、"五个一工程奖"、四川文华大奖等</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="biz" class="biz">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-num">BUSINESS</div>
+      <h2 class="sec-title">三大<em>业务板块</em></h2>
+      <p class="sec-sub">多媒体创作 · 3D 动画特效 · 影视制作</p>
+    </div>
+    <div class="biz-grid">
+      <div class="biz-card reveal">
+        <div class="biz-num">01 / MULTIMEDIA</div>
+        <h3>多媒体创作</h3>
+        <p>为歌剧、话剧、音乐剧提供多媒体叙事设计。作品累计获国家级奖项 4 项、10 多部省级优秀剧目奖，覆盖中国歌剧节、京剧节、话剧节、音乐剧节。</p>
+        <div class="biz-tags"><span class="biz-tag">剧目多媒体</span><span class="biz-tag">晚会创作</span><span class="biz-tag">文旅演出</span></div>
+      </div>
+      <div class="biz-card reveal reveal-delay-1">
+        <div class="biz-num">02 / 3D ANIMATION</div>
+        <h3>3D 动画特效</h3>
+        <p>自主研发裸眼 3D 灯光秀、电视包装动画，技术应用于世界科幻大会、世乒赛、大运会、世运会等国际级项目，打造全球首场科幻主题裸眼 3D 秀。</p>
+        <div class="biz-tags"><span class="biz-tag">裸眼 3D</span><span class="biz-tag">球幕拓扑</span><span class="biz-tag">全息视效</span></div>
+      </div>
+      <div class="biz-card reveal reveal-delay-2">
+        <div class="biz-num">03 / TVC PRODUCTION</div>
+        <h3>影视制作</h3>
+        <p>打造政企宣传片、纪录片及广告片，服务覆盖 20+ 省市级重点项目。从策划、拍摄到后期，提供一站式影视解决方案。</p>
+        <div class="biz-tags"><span class="biz-tag">宣传片</span><span class="biz-tag">纪录片</span><span class="biz-tag">广告片</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="cases" class="cases">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-num">CASES</div>
+      <h2 class="sec-title">案例<em>展示</em></h2>
+      <p class="sec-sub">以专业技术创造一流视觉体验 · 服务国家级与国际级文化项目</p>
+    </div>
+
+    <div class="case-tabs reveal" role="tablist">
+      <button class="case-tab active" data-tab="drama">剧目多媒体</button>
+      <button class="case-tab" data-tab="performance">演出多媒体</button>
+      <button class="case-tab" data-tab="tech">3D 专业技术</button>
+      <button class="case-tab" data-tab="media">影像包装</button>
+    </div>
+
+    <div class="case-panel active" id="panel-drama"></div>
+    <div class="case-panel" id="panel-performance"></div>
+    <div class="case-panel" id="panel-tech"></div>
+    <div class="case-panel" id="panel-media"></div>
+  </div>
+</section>
+
+<section id="honor" class="honor">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-num">HONORS</div>
+      <h2 class="sec-title">荣誉<em>之墙</em></h2>
+      <p class="sec-sub">国家级 · 省级 · 行业权威奖项见证</p>
+    </div>
+    <div class="honor-grid reveal" id="honorGrid"></div>
+    <div class="honor-list reveal">
+      <h3>主要获奖剧目</h3>
+      <div class="honor-cols">
+        <ul>
+          <li>音乐剧《我的两万个兄弟》— 中宣部"五个一工程"奖</li>
+          <li>歌剧《陈寿著三国》— 第五届中国歌剧节最高奖</li>
+          <li>话剧《林基路》— 第十八届中国戏剧节优秀剧目奖</li>
+          <li>印象京剧《薛涛》— 第十届中国京剧节优秀剧目奖</li>
+          <li>舞剧《第 38 任班长》— 四川文华大奖</li>
+          <li>儿童舞剧《小军号》— 四川文华大奖 · 巴蜀文艺奖</li>
+        </ul>
+        <ul>
+          <li>舞剧《茶马古道》— 国家艺术基金 · 巴蜀文艺奖</li>
+          <li>话剧《无处不青山》— 四川文化奖</li>
+          <li>舞剧《屈原》— 四川文化奖</li>
+          <li>话剧《记忆密码》— 国家艺术基金 · 四川文化奖</li>
+          <li>歌舞剧《长征长征》— 四川文化奖 · 少数民族艺术节展演第一名</li>
+          <li>歌舞剧《云上的呼唤》— 四川文化奖</li>
+          <li>曲艺剧《玉石调羹》— 四川省舞台艺术精品</li>
+          <li>海南省话剧《临高号角·抢滩》— 海南省"五个一"作品</li>
+          <li>创始人袁朝伟 — 二级舞美设计 · 电子职称证书</li>
+          <li>袁朝伟受邀参加 — 2022 年第十一届伯明翰世界运动会</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <div class="contact-eyebrow">LET'S CREATE</div>
+      <h2 class="contact-title">期待与您<br><em>共创下一场视觉盛宴</em></h2>
+      <p class="contact-sub">从前沿创意到落地执行 · 我们已准备好为您的舞台注入灵魂</p>
+      <a class="contact-btn" href="#top">回到顶部 ↑</a>
+      <div class="contact-mark">
+        <img src="assets/brand/logo-primary.jpg" alt="锐志">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/brand/logo-2.png" alt="锐志" class="footer-logo">
+        <div class="footer-name">四川锐志文化传播有限公司</div>
+        <div class="footer-en">SICHUAN RUIZHI CULTURAL COMMUNICATION CO., LTD.</div>
+      </div>
+      <div class="footer-meta">
+        <div><span>总部</span>四川 · 成都</div>
+        <div><span>业务</span>多媒体视效 · 3D 动画 · 影视制作 · 大型演出全案</div>
+        <div><span>核心理念</span>技术重塑艺术边界</div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 四川锐志文化传播有限公司 · 保留所有权利</div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-panel">
+    <button class="lb-close" id="lbClose">×</button>
+    <div class="lb-header">
+      <div class="lb-tag" id="lbTag"></div>
+      <h3 class="lb-title" id="lbTitle"></h3>
+      <div class="lb-meta" id="lbMeta"></div>
+    </div>
+    <div class="lb-stage">
+      <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+      <div class="lb-main"><img id="lbImg" src="" alt=""></div>
+      <button class="lb-nav lb-next" id="lbNext">›</button>
+      <div class="lb-counter" id="lbCounter">1 / 1</div>
+    </div>
+    <div class="lb-thumbs" id="lbThumbs"></div>
+  </div>
+</div>
+
+<style>
+/* CASES */
+.cases{background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%);padding-bottom:140px}
+.case-tabs{
+  display:flex;justify-content:center;gap:8px;flex-wrap:wrap;
+  margin-bottom:60px;
+  border-bottom:1px solid var(--line);padding-bottom:0;
+}
+.case-tab{
+  background:transparent;border:none;
+  padding:18px 32px;
+  font-family:'Noto Serif SC',serif;font-size:17px;font-weight:500;
+  color:var(--muted);cursor:pointer;
+  position:relative;letter-spacing:.1em;
+  transition:color .3s;
+}
+.case-tab::after{content:"";position:absolute;left:50%;bottom:-1px;width:0;height:2px;background:var(--gold-light);transition:all .3s;transform:translateX(-50%)}
+.case-tab:hover{color:var(--gold)}
+.case-tab.active{color:var(--gold-light)}
+.case-tab.active::after{width:60%}
+.case-panel{display:none;animation:fadeUp .6s}
+.case-panel.active{display:block}
+
+.case-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:28px}
+.case-card{
+  background:rgba(201,169,110,.03);
+  border:1px solid var(--line);
+  overflow:hidden;
+  transition:all .5s;cursor:pointer;
+  display:flex;flex-direction:column;
+}
+.case-card:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.case-card:hover .case-img img{transform:scale(1.08)}
+.case-img{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--bg-3)}
+.case-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.case-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,11,13,.7));opacity:0;transition:opacity .3s}
+.case-card:hover .case-img::after{opacity:1}
+.case-tag{position:absolute;top:14px;left:14px;z-index:2;font-size:11px;padding:5px 12px;background:rgba(11,11,13,.85);border:1px solid var(--gold);color:var(--gold-light);letter-spacing:.15em;backdrop-filter:blur(8px)}
+.case-body{padding:24px 24px 28px;flex:1;display:flex;flex-direction:column}
+.case-title{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.4}
+.case-meta{font-size:12px;color:var(--gold);letter-spacing:.15em;margin-bottom:12px}
+.case-desc{font-size:13.5px;color:var(--muted);line-height:1.75}
+.case-arrow{margin-top:auto;padding-top:16px;font-size:12px;color:var(--gold-dim);letter-spacing:.2em;display:flex;align-items:center;gap:8px}
+.case-arrow::before{content:"";width:20px;height:1px;background:var(--gold-dim);transition:width .3s}
+.case-card:hover .case-arrow{color:var(--gold-light)}
+.case-card:hover .case-arrow::before{width:40px;background:var(--gold-light)}
+
+.case-img-empty{background:radial-gradient(ellipse at center,#1d1810 0%,#0b0b0d 70%);display:flex;align-items:center;justify-content:center;position:relative}
+.case-img-empty::before{content:"";position:absolute;inset:20px;border:1px solid var(--line);pointer-events:none}
+.case-img-empty::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(201,169,110,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,110,.05) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+.case-img-empty-inner{text-align:center;position:relative;z-index:1}
+.case-img-empty-mark{font-family:'Noto Serif SC',serif;font-size:28px;letter-spacing:.4em;color:var(--gold-light);text-shadow:0 0 20px rgba(201,169,110,.4);margin-bottom:12px}
+.case-img-empty-sub{font-size:12px;letter-spacing:.2em;color:var(--gold-dim)}
+
+/* HONOR */
+.honor{background:var(--bg)}
+.honor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-bottom:80px}
+.honor-item{
+  display:block;aspect-ratio:3/4;overflow:hidden;border:1px solid var(--line);
+  background:var(--bg-3);cursor:pointer;position:relative;
+  transition:all .4s;
+}
+.honor-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.honor-item:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 16px 40px rgba(201,169,110,.2)}
+.honor-item:hover img{transform:scale(1.05)}
+.honor-item::after{content:"点击查看";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(11,11,13,.7);color:var(--gold-light);font-size:14px;letter-spacing:.3em;opacity:0;transition:opacity .3s}
+.honor-item:hover::after{opacity:1}
+.honor-list h3{font-family:'Noto Serif SC',serif;font-size:22px;color:var(--gold-light);text-align:center;margin-bottom:36px;font-weight:700}
+.honor-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 60px;max-width:1000px;margin:0 auto}
+.honor-cols li{font-size:14.5px;color:var(--text);padding:12px 0 12px 20px;border-bottom:1px dashed var(--line);position:relative;line-height:1.7}
+.honor-cols li::before{content:"";position:absolute;left:0;top:22px;width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+
+/* CONTACT */
+.contact{
+  background:
+    radial-gradient(ellipse at center,rgba(201,169,110,.18) 0%,transparent 60%),
+    linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);
+  text-align:center;padding:160px 0 120px;
+}
+.contact-inner{max-width:780px;margin:0 auto}
+.contact-eyebrow{font-size:13px;letter-spacing:.5em;color:var(--gold);margin-bottom:24px}
+.contact-title{font-family:'Noto Serif SC',serif;font-size:clamp(36px,5vw,60px);font-weight:900;line-height:1.3;color:var(--text);margin-bottom:20px}
+.contact-title em{font-style:normal;background:linear-gradient(180deg,var(--gold-light),var(--gold-dim));-webkit-background-clip:text;background-clip:text;color:transparent}
+.contact-sub{font-size:16px;color:var(--muted);margin-bottom:48px;letter-spacing:.05em}
+.contact-btn{
+  display:inline-block;padding:18px 48px;border:1px solid var(--gold);
+  font-size:14px;letter-spacing:.3em;color:var(--gold-light);
+  transition:all .3s;position:relative;overflow:hidden;
+}
+.contact-btn:hover{background:var(--gold);color:var(--bg)}
+.contact-mark{margin-top:60px;display:flex;justify-content:center}
+.contact-mark img{height:60px;opacity:.7;filter:drop-shadow(0 0 20px rgba(201,169,110,.3));animation:float 4s ease-in-out infinite}
+
+/* FOOTER */
+.footer{background:var(--bg-2);border-top:1px solid var(--line);padding:60px 0 30px;font-size:13px;color:var(--muted)}
+.footer-grid{display:grid;grid-template-columns:1fr 2fr;gap:60px;margin-bottom:40px}
+.footer-logo{height:42px;margin-bottom:16px;filter:drop-shadow(0 0 12px rgba(201,169,110,.3))}
+.footer-name{font-family:'Noto Serif SC',serif;font-size:18px;color:var(--gold-light);font-weight:700;margin-bottom:6px}
+.footer-en{font-size:11px;letter-spacing:.25em;color:var(--gold-dim)}
+.footer-meta{display:grid;gap:14px}
+.footer-meta>div{padding:14px 0;border-bottom:1px dashed var(--line)}
+.footer-meta span{display:inline-block;width:80px;color:var(--gold);letter-spacing:.15em;font-size:12px}
+.footer-bottom{text-align:center;padding-top:30px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.15em}
+
+/* LIGHTBOX GALLERY */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9999;display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(8px);animation:fadeIn .3s}
+.lightbox.active{display:flex}
+.lb-panel{width:100%;max-width:1280px;max-height:100%;display:flex;flex-direction:column;background:rgba(15,12,8,.6);border:1px solid var(--line);position:relative;animation:fadeUp .4s}
+.lb-close{position:absolute;top:8px;right:12px;background:transparent;border:1px solid var(--line);color:var(--gold-light);width:40px;height:40px;font-size:24px;line-height:1;cursor:pointer;transition:all .3s;z-index:10;font-family:'Noto Serif SC',serif}
+.lb-close:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.lb-header{padding:32px 40px 16px;border-bottom:1px solid var(--line);text-align:center}
+.lb-tag{display:inline-block;font-size:11px;padding:4px 14px;border:1px solid var(--gold);color:var(--gold-light);letter-spacing:.2em;margin-bottom:14px}
+.lb-title{font-family:'Noto Serif SC',serif;font-size:28px;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.3}
+.lb-meta{font-size:13px;color:var(--gold);letter-spacing:.15em}
+.lb-stage{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:24px 70px;background:radial-gradient(ellipse at center,#1d1810 0%,#0b0b0d 70%)}
+.lb-main{max-width:100%;max-height:100%;display:flex;align-items:center;justify-content:center;min-height:0;min-width:0}
+.lb-main img{max-width:100%;max-height:65vh;object-fit:contain;border:1px solid var(--line);box-shadow:0 8px 60px rgba(0,0,0,.6);animation:fadeIn .35s}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border:1px solid var(--gold);background:rgba(11,11,13,.7);color:var(--gold-light);font-size:30px;line-height:1;cursor:pointer;transition:all .3s;font-family:'Noto Serif SC',serif;backdrop-filter:blur(4px)}
+.lb-nav:hover{background:var(--gold);color:var(--bg)}
+.lb-prev{left:14px}
+.lb-next{right:14px}
+.lb-counter{position:absolute;bottom:14px;right:24px;font-size:12px;letter-spacing:.2em;color:var(--gold);background:rgba(11,11,13,.7);padding:6px 14px;border:1px solid var(--line);font-family:'Noto Serif SC',serif}
+.lb-thumbs{display:flex;gap:10px;padding:14px 24px;overflow-x:auto;overflow-y:hidden;border-top:1px solid var(--line);scrollbar-width:thin;scrollbar-color:var(--gold-dim) var(--bg-2)}
+.lb-thumbs::-webkit-scrollbar{height:6px}
+.lb-thumbs::-webkit-scrollbar-track{background:var(--bg-2)}
+.lb-thumbs::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:3px}
+.lb-thumb{flex:0 0 140px;aspect-ratio:16/9;cursor:pointer;border:1px solid var(--line);overflow:hidden;position:relative;transition:all .3s;background:var(--bg-3)}
+.lb-thumb img{width:100%;height:100%;object-fit:cover;transition:all .3s}
+.lb-thumb:hover{border-color:var(--gold-dim)}
+.lb-thumb.active{border-color:var(--gold-light);box-shadow:0 0 16px rgba(201,169,110,.4)}
+.lb-thumb.active img{opacity:1}
+.lb-thumb:not(.active) img{opacity:.65}
+
+@media(max-width:980px){
+  .case-grid{grid-template-columns:1fr}
+  .honor-cols{grid-template-columns:1fr;gap:0}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .case-tab{padding:14px 18px;font-size:15px}
+}
+</style>
+
+<script>
+/* ========== 案例数据 ========== */
+const casesData = {
+  drama: [
+    {tag:'歌剧', title:'《陈寿·梦魂三国》', meta:'第五届中国歌剧节 · 优秀剧目奖', desc:'多媒体叙事设计贯穿全剧，以历史时空交错构建沉浸式舞台视觉。', imgs:['assets/cases/drama/chenshou-01.jpg','assets/cases/drama/chenshou-02.jpg','assets/cases/drama/chenshou-03.jpg']},
+    {tag:'音乐剧', title:'《我的两万个兄弟》', meta:'第二届中国音乐剧节 · 优秀剧目奖', desc:'为革命题材注入当代视效语言，让英雄叙事在舞台上重新被看见。', imgs:['assets/cases/drama/wode-01.jpg','assets/cases/drama/wode-02.jpg','assets/cases/drama/wode-03.jpg']},
+    {tag:'话剧', title:'《林基路》', meta:'第十八届中国戏剧节 · 优秀剧目奖', desc:'新疆话剧团精品剧目，多媒体视觉再现革命先辈精神图谱。', imgs:['assets/cases/drama/linjilu-01.jpg','assets/cases/drama/linjilu-02.jpg','assets/cases/drama/linjilu-03.jpg']},
+    {tag:'京剧', title:'印象京剧《薛涛》', meta:'第十届中国京剧节 · 优秀剧目奖', desc:'传统戏曲遇上现代视效，呈现薛涛诗意人生的视觉画卷。', imgs:['assets/cases/drama/xuetao-01.jpg','assets/cases/drama/xuetao-02.jpg','assets/cases/drama/xuetao-03.jpg']},
+    {tag:'舞剧', title:'《茶马古道》', meta:'国家艺术基金项目 · 全国舞剧荷花奖', desc:'以多媒体呈现茶马古道千年文化脉络，舞蹈与影像共生共舞。', imgs:['assets/cases/drama/chamagudao-01.jpg','assets/cases/drama/chamagudao-02.jpg']},
+    {tag:'话剧', title:'《记忆密码》', meta:'2019 国家艺术基金项目', desc:'在虚实交错的影像空间中，展开一段关于记忆与人性的深度叙事。', imgs:['assets/cases/drama/jiyimima-01.jpg','assets/cases/drama/jiyimima-02.jpg']}
+  ],
+  performance: [
+    {tag:'文旅演出', title:'《只此琅琊》', meta:'山东临沂古城旅游演绎', desc:'2024 年山东文旅标杆剧目，创下单日 150 万收益记录，现象级文旅 IP。', imgs:['assets/cases/performance/langya-01.jpg','assets/cases/performance/langya-02.jpg']},
+    {tag:'国际赛事', title:'第 81 届世界科幻大会', meta:'开幕式 · 闭幕式视效总监', desc:'打造全球首场科幻主题裸眼 3D 秀，全息视效设计，引领大会视觉新标杆。', imgs:['assets/cases/performance/kehuan-01.jpg','assets/cases/performance/kehuan-02.jpg','assets/cases/performance/kehuan-03.jpg']},
+    {tag:'国际赛事', title:'2025 世界运动会', meta:'开闭幕式视效执行', desc:'世运会开闭幕式多媒体全程执行，呈现国际体育盛会的中国式视觉表达。', imgs:['assets/cases/performance/worldgames-01.jpg','assets/cases/performance/worldgames-02.jpg']},
+    {tag:'国际赛事', title:'第 56 届世界乒乓球锦标赛', meta:'开幕式多媒体设计及执行', desc:'2022 ITTF 成都世乒赛团体锦标赛开幕式，融合运动美学与东方韵致。', imgs:['assets/cases/performance/tt-01.jpg']},
+    {tag:'国际赛事', title:'第 31 届世界大学生运动会', meta:'火炬传递宣推活动视觉团队', desc:'火炬全国传递与系列活动演出，多媒体动态影像与实景实时交互。', imgs:['assets/cases/performance/universiade-01.jpg','assets/cases/performance/universiade-02.jpg']},
+    {tag:'国家级', title:'第九届残运会闭幕式', meta:'暨第六届特殊奥林匹克运动会', desc:'用视效语言诠释生命力量，为特殊运动员打造温暖的闭幕之夜。', imgs:['assets/cases/performance/canji-01.jpg','assets/cases/performance/canji-02.jpg']},
+    {tag:'国家级', title:'建党 100 周年文艺晚会', meta:'四川省庆祝建党百年大型晚会', desc:'《巴蜀儿女心向党》多媒体视觉，呈现百年党史的壮阔画卷。', imgs:['assets/cases/performance/dangshi-01.jpg','assets/cases/performance/dangshi-02.jpg','assets/cases/performance/dangshi-03.jpg']},
+    {tag:'国家级', title:'西部国际博览会开幕式', meta:'文艺演出多媒体视觉', desc:'西博会国家级开幕演出视觉设计，展现西部开放发展的时代气象。', imgs:['assets/cases/performance/xibohui-01.jpg','assets/cases/performance/xibohui-02.jpg','assets/cases/performance/xibohui-03.jpg']},
+    {tag:'国家级', title:'世界竹藤大会', meta:'国家会议中心演出', desc:'国际会议中心大型文艺演出，以视觉语言讲述绿色发展故事。', imgs:['assets/cases/performance/zhutan-01.jpg','assets/cases/performance/zhutan-02.jpg']},
+    {tag:'地方级', title:'市运会开幕式', meta:'文艺演出多媒体', desc:'市运会开幕式的视觉总设计，运动激情与城市活力共舞。', imgs:['assets/cases/performance/shiyunhui-01.jpg','assets/cases/performance/shiyunhui-02.jpg']}
+  ],
+  tech: [
+    {tag:'球幕 3D', title:'球幕 3D 拓扑建模', meta:'裸眼 3D · 球幕视觉系统', desc:'基于 UV 拓扑的球幕 3D 视觉系统，让画面在曲面上自然延展，为演出空间创造包裹式沉浸体验。', imgs:['assets/cases/tech/sphere-01.jpg','assets/cases/tech/sphere-02.jpg','assets/cases/tech/sphere-03.jpg']},
+    {tag:'折角 3D', title:'折角 / 平面 3D', meta:'裸眼 3D · 折角屏幕方案', desc:'为折角屏幕与平面异形屏量身定制的裸眼 3D 方案，突破平面显示的边界，让画面立体跃出。', imgs:['assets/cases/tech/planar-01.jpg','assets/cases/tech/planar-02.jpg','assets/cases/tech/planar-03.jpg']},
+    {tag:'IP 合作', title:'IP 合作 3D 视效', meta:'裸眼 3D · IP 视觉定制', desc:'为 IP 内容定制裸眼 3D 视觉，从角色动作到场景空间，全流程打造高识别度的视觉资产。', imgs:['assets/cases/tech/ip-01.jpg','assets/cases/tech/ip-02.jpg','assets/cases/tech/ip-03.jpg']}
+  ],
+  media: [
+    {tag:'电视包装', title:'频道与节目包装', meta:'电视包装 3D 动画设计制作', desc:'为卫视与地面频道打造整体包装方案，从 ID、片头、转场到角标，全流程 3D 动画设计。', imgs:['assets/cases/tv/tv-01.jpg','assets/cases/tv/tv-02.jpg','assets/cases/tv/tv-03.jpg','assets/cases/tv/tv-04.jpg']},
+    {tag:'形象宣传片', title:'政企形象宣传片', meta:'宣传片 · 专题片 · 纪录片', desc:'覆盖 20+ 省市级重点项目，从策划、拍摄到后期一站式影视解决方案。', imgs:['assets/cases/promo/promo-01.jpg','assets/cases/promo/promo-02.jpg','assets/cases/promo/promo-03.jpg']}
+  ]
+};
+
+/* ========== 渲染 ========== */
+function renderCases(){
+  Object.keys(casesData).forEach(key=>{
+    const panel = document.getElementById('panel-'+key);
+    const grid = document.createElement('div');
+    grid.className = 'case-grid';
+    casesData[key].forEach((c,i)=>{
+      const card = document.createElement('a');
+      card.className = 'case-card reveal';
+      card.href = 'javascript:void(0)';
+      card.setAttribute('data-imgs', JSON.stringify(c.imgs));
+      card.setAttribute('data-title', c.title);
+      card.setAttribute('data-meta', c.meta);
+      card.setAttribute('data-tag', c.tag);
+      const firstImg = c.imgs[0] || '';
+      const imgBlock = firstImg ? `
+        <div class="case-img">
+          <span class="case-tag">${c.tag}</span>
+          <img src="${firstImg}" alt="${c.title}" loading="lazy">
+        </div>` : `
+        <div class="case-img case-img-empty">
+          <span class="case-tag">${c.tag}</span>
+          <div class="case-img-empty-inner">
+            <div class="case-img-empty-mark">RUIZHI</div>
+            <div class="case-img-empty-sub">演出视效设计 / 舞台多媒体</div>
+          </div>
+        </div>`;
+      card.innerHTML = imgBlock + `
+        <div class="case-body">
+          <h3 class="case-title">${c.title}</h3>
+          <div class="case-meta">${c.meta}</div>
+          <p class="case-desc">${c.desc}</p>
+          <div class="case-arrow">VIEW PROJECT</div>
+        </div>`;
+      grid.appendChild(card);
+    });
+    panel.appendChild(grid);
+  });
+  // 再次触发观察
+  document.querySelectorAll('.case-card.reveal').forEach(el=>observer.observe(el));
+}
+
+/* ========== 荣誉数据 ========== */
+const honorData = [
+  {src:'assets/honor/01-centennial.jpg', title:'庆祝建党 100 周年纪念', meta:'2021'},
+  {src:'assets/honor/02-centennial-cover.jpg', title:'百年礼赞 · 封面纪念', meta:'2021'},
+  {src:'assets/honor/03-yuanchaowei-zhicheng.jpg', title:'袁朝伟 · 二级舞美设计师', meta:'电子职称证书 · 2025'},
+  {src:'assets/honor/04-class38.jpg', title:'舞剧《第 38 任班长》', meta:'四川文华大奖'},
+  {src:'assets/honor/05-wode-wugeyi.jpg', title:'音乐剧《我的两万个兄弟》', meta:'中宣部"五个一工程"奖'},
+  {src:'assets/honor/06-wode-cert.jpg', title:'《我的两万个兄弟》获奖证书', meta:'国家级'},
+  {src:'assets/honor/07-chenshou-sanguo.jpg', title:'歌剧《陈寿著三国》', meta:'第五届中国歌剧节最高奖'},
+  {src:'assets/honor/08-shiping.jpg', title:'世乒赛开幕式 · 荣誉表彰', meta:'国家级赛事'},
+  {src:'assets/honor/09-second-prize.jpg', title:'省级二等奖', meta:'行业表彰'},
+  {src:'assets/honor/10-yunshang.jpg', title:'歌舞剧《云上的呼唤》', meta:'四川文化奖'},
+  {src:'assets/honor/11-birmingham.jpg', title:'第十一届伯明翰世界运动会 · 邀请函', meta:'2022'},
+  {src:'assets/honor/12-universiade.jpg', title:'第 31 届世界大学生运动会', meta:'国际级赛事'},
+  {src:'assets/honor/13-xiaojunhao.jpg', title:'儿童舞剧《小军号》', meta:'四川文华大奖'},
+  {src:'assets/honor/14-xiaojunhao-bashu.jpg', title:'《小军号》巴蜀文艺奖', meta:'省级'},
+  {src:'assets/honor/15-quyuan.jpg', title:'舞剧《屈原》', meta:'四川文化奖'},
+  {src:'assets/honor/16-wechat-1.jpg', title:'荣誉表彰 · 演出实况', meta:'省级'},
+  {src:'assets/honor/17-wechat-2.jpg', title:'荣誉表彰 · 演出实况', meta:'省级'},
+  {src:'assets/honor/18-wenhua.jpg', title:'四川省文化艺术奖', meta:'省级'},
+  {src:'assets/honor/19-wuchu.jpg', title:'话剧《无处不青山》', meta:'四川文化奖'},
+  {src:'assets/honor/20-linjilu-1.jpg', title:'话剧《林基路》荣誉 · 正面', meta:'第十八届中国戏剧节'},
+  {src:'assets/honor/21-linjilu-2.jpg', title:'话剧《林基路》荣誉 · 背面', meta:'第十八届中国戏剧节'},
+  {src:'assets/honor/22-canlian.jpg', title:'残联颁发 · 荣誉表彰', meta:'国家级'},
+  {src:'assets/honor/23-fanzhuqing.jpg', title:'《泛珠情》荣誉表彰', meta:'行业级'},
+  {src:'assets/honor/24-chamagudao.jpg', title:'舞剧《茶马古道》', meta:'国家艺术基金 · 荷花奖'},
+  {src:'assets/honor/25-chamagudao-bashu.jpg', title:'《茶马古道》巴蜀文艺奖', meta:'省级'},
+  {src:'assets/honor/26-xuetao.jpg', title:'印象京剧《薛涛》', meta:'第十届中国京剧节'},
+  {src:'assets/honor/27-yuanchaowei.jpg', title:'创始人袁朝伟 · 行业表彰', meta:'个人荣誉'},
+  {src:'assets/honor/28-changzheng-minzu.jpg', title:'《长征》少数民族艺术节展演', meta:'第一名'},
+  {src:'assets/honor/29-changzheng.jpg', title:'歌舞剧《长征长征》', meta:'四川文化奖'},
+  {src:'assets/honor/30-changzheng-minzu2.jpg', title:'《长征长征》少数民族展演', meta:'第一名'}
+];
+function renderHonor(){
+  const grid = document.getElementById('honorGrid');
+  if(!grid) return;
+  grid.innerHTML = honorData.map(h=>`
+    <a class="honor-item"
+       data-imgs='["${h.src}"]'
+       data-title="${h.title}"
+       data-meta="${h.meta}"
+       data-tag="HONOR">
+      <img src="${h.src}" alt="${h.title}" loading="lazy">
+    </a>`).join('');
+  observer.observe(grid);
+}
+
+/* ========== Tab 切换 ========== */
+document.querySelectorAll('.case-tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.case-tab').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.case-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    const tab = btn.dataset.tab;
+    const panel = document.getElementById('panel-'+tab);
+    panel.classList.add('active');
+    // 重置动画
+    panel.querySelectorAll('.case-card').forEach((c,i)=>{
+      c.classList.remove('in');
+      setTimeout(()=>c.classList.add('in'), 50+i*60);
+    });
+  });
+});
+
+/* ========== Lightbox Gallery ========== */
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbTitle = document.getElementById('lbTitle');
+const lbMeta = document.getElementById('lbMeta');
+const lbTag = document.getElementById('lbTag');
+const lbThumbs = document.getElementById('lbThumbs');
+const lbCounter = document.getElementById('lbCounter');
+let lbImgs = [], lbIdx = 0;
+
+function openLightbox(imgs, title, meta, tag){
+  lbImgs = imgs;
+  lbIdx = 0;
+  lbTitle.textContent = title || '';
+  lbMeta.textContent = meta || '';
+  lbTag.textContent = tag || '';
+  lbTag.style.display = tag ? 'inline-block' : 'none';
+  renderThumbs();
+  showImg(0);
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+function renderThumbs(){
+  lbThumbs.innerHTML = lbImgs.map((src,i)=>
+    `<div class="lb-thumb${i===lbIdx?' active':''}" data-i="${i}"><img src="${src}" alt=""></div>`
+  ).join('');
+  // 当前 thumb 滚动到视口
+  setTimeout(()=>{
+    const cur = lbThumbs.querySelector('.lb-thumb.active');
+    if(cur) cur.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+  },50);
+}
+function showImg(i){
+  if(!lbImgs.length) return;
+  lbIdx = (i + lbImgs.length) % lbImgs.length;
+  lbImg.style.opacity = '0';
+  setTimeout(()=>{
+    lbImg.src = lbImgs[lbIdx];
+    lbImg.onload = ()=> lbImg.style.opacity = '1';
+    lbCounter.textContent = `${lbIdx+1} / ${lbImgs.length}`;
+    lbThumbs.querySelectorAll('.lb-thumb').forEach((t,j)=>{
+      t.classList.toggle('active', j===lbIdx);
+    });
+    const cur = lbThumbs.querySelector('.lb-thumb.active');
+    if(cur) cur.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+  },150);
+}
+
+document.addEventListener('click',e=>{
+  const trigger = e.target.closest('[data-imgs]');
+  if(trigger){
+    e.preventDefault();
+    let imgs;
+    try{ imgs = JSON.parse(trigger.dataset.imgs); }catch{ imgs = []; }
+    if(!imgs || !imgs.length) return;
+    openLightbox(imgs, trigger.dataset.title, trigger.dataset.meta, trigger.dataset.tag);
+    return;
+  }
+  const navBtn = e.target.closest('.lb-nav');
+  if(navBtn){
+    e.stopPropagation();
+    showImg(navBtn.id === 'lbNext' ? lbIdx+1 : lbIdx-1);
+    return;
+  }
+  const thumb = e.target.closest('.lb-thumb');
+  if(thumb){
+    e.stopPropagation();
+    showImg(parseInt(thumb.dataset.i));
+    return;
+  }
+  if(e.target.id==='lbClose' || e.target===lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown',e=>{
+  if(!lightbox.classList.contains('active')) return;
+  if(e.key==='Escape') closeLightbox();
+  else if(e.key==='ArrowRight') showImg(lbIdx+1);
+  else if(e.key==='ArrowLeft') showImg(lbIdx-1);
+});
+
+/* ========== 滚动进度条 ========== */
+const progress = document.getElementById('progress');
+function updateProgress(){
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  progress.style.width = pct + '%';
+}
+window.addEventListener('scroll', updateProgress, {passive:true});
+
+/* ========== 数字递增 ========== */
+function countUp(){
+  document.querySelectorAll('.stat-num').forEach(el=>{
+    const target = parseInt(el.dataset.count);
+    const suffix = (el.textContent.match(/[+]/) || [''])[0];
+    let cur = 0;
+    const step = Math.max(1, Math.ceil(target/40));
+    const timer = setInterval(()=>{
+      cur += step;
+      if(cur >= target){cur = target; clearInterval(timer)}
+      el.textContent = cur + (cur===target ? suffix : '');
+    }, 35);
+  });
+}
+
+/* ========== 滚动渐入 ========== */
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){
+      en.target.classList.add('in');
+      observer.unobserve(en.target);
+    }
+  });
+},{threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+/* ========== 导航滚动样式 ========== */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY > 40) nav.style.background = 'rgba(11,11,13,.95)';
+  else nav.style.background = 'rgba(11,11,13,.85)';
+},{passive:true});
+
+
+/* ========== Nav 当前 section 高亮 ========== */
+const navLinks = document.querySelectorAll('.nav-links a');
+const sections = ['about','biz','cases','honor','contact'].map(id=>document.getElementById(id));
+function updateNav(){
+  const y = window.scrollY + 120;
+  let active = '';
+  sections.forEach(s=>{ if(s && s.offsetTop <= y) active = s.id; });
+  navLinks.forEach(a=>{
+    if(a.getAttribute('href')==='#'+active) a.style.color='var(--gold-light)';
+    else a.style.color='';
+  });
+}
+window.addEventListener('scroll', updateNav, {passive:true});
+updateNav();
+
+/* ========== 启动 ========== */
+renderCases();
+renderHonor();
+window.addEventListener('load',()=>{
+  // Hero 数字动画
+  setTimeout(countUp, 1100);
+  // 首屏 card 立即显示
+  document.querySelectorAll('#panel-drama .case-card').forEach((c,i)=>{
+    setTimeout(()=>c.classList.add('in'), 200 + i*80);
+  });
+});
+</script>
+</body>
+</html>

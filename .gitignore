@@ -1,0 +1,16 @@
+# 大文件/源材料，不进仓库
+四川锐志(4).pptx
+原始资料/
+公司logo/
+work/
+
+# macOS
+.DS_Store
+._*
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
