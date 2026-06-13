@@ -4,7 +4,11 @@
 把 `四川锐志(4).pptx` 里的内容做成一页暗金色系、大气的公司介绍网页。
 
 ## 2. 状态
-进行中
+**已部署** ✓
+
+- 🌐 在线：https://ruizhi-intro.pages.dev
+- 📦 源码：https://github.com/yuancw/ruizhi-intro
+- ☁️ 平台：Cloudflare Pages（Git 自动部署）
 
 ## 3. 关键文件 / 目录
 - `index.html` — 单文件站点（内联 CSS + JS，无外部依赖）
@@ -32,9 +36,9 @@
 - 重复元素（如 `image10.jpeg` 装饰小条）剔除
 
 ## 6. 下一步 TODO
-1. 写入 `index.html` 并本地预览
-2. 校对文案，去 PPT 提取的乱码（"之叭"、"wjrAmn" 等）
-3. 浏览器打开截图验收
+1. 绑自定义域名（如果有）
+2. 接 Cloudflare Analytics 看访问数据
+3. 根据客户反馈调整文案 / 配图
 
 ## 7. 关联
 - 源文件：`/Volumes/Macbot/Codex202606/0013公司项目介绍/四川锐志(4).pptx`
