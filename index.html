@@ -124,18 +124,18 @@ img{display:block;max-width:100%;height:auto}
 .hero-sub{font-size:clamp(15px,1.5vw,19px);color:var(--text);letter-spacing:.05em;max-width:780px;margin:0 auto 48px;opacity:0;animation:fadeUp 1s .7s forwards}
 .hero-stats{
   display:flex;justify-content:center;gap:80px;flex-wrap:wrap;
-  margin-top:60px;
+  margin-top:48px;margin-bottom:120px;
   opacity:0;animation:fadeUp 1s 1s forwards;
 }
 .stat-num{font-family:'Noto Serif SC',serif;font-size:48px;font-weight:700;background:linear-gradient(180deg,var(--gold-light),var(--gold-dim));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
 .stat-label{font-size:12px;letter-spacing:.3em;color:var(--muted);margin-top:12px;text-transform:uppercase}
 .hero-scroll{
-  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:12px;
+  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:row;align-items:center;gap:16px;
   font-size:11px;letter-spacing:.3em;color:var(--gold-dim);
   opacity:0;animation:fadeUp 1s 1.3s forwards;
 }
-.hero-scroll-line{width:1px;height:50px;background:linear-gradient(180deg,transparent,var(--gold));animation:scrollLine 2s infinite}
+.hero-scroll-particles{width:58px;height:78px;display:block;filter:drop-shadow(0 0 6px rgba(232,200,135,.25))}
 
 /* SECTION 通用 */
 section{padding:140px 0;position:relative}
@@ -214,7 +214,7 @@ section{padding:140px 0;position:relative}
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a class="brand" href="#top">
-      <img src="assets/brand/logo-2.png" alt="锐志" class="brand-mark">
+      <img src="assets/brand/logo-1-original.png" alt="锐志" class="brand-mark">
       <div class="brand-name">四川锐志<small>SICHUAN RUIZHI</small></div>
     </a>
     <div class="nav-links">
@@ -240,7 +240,7 @@ section{padding:140px 0;position:relative}
       <div><div class="stat-num" data-count="30">0+</div><div class="stat-label">国际级赛事</div></div>
     </div>
   </div>
-  <div class="hero-scroll">SCROLL<div class="hero-scroll-line"></div></div>
+  <div class="hero-scroll">SCROLL<canvas id="heroParticles" class="hero-scroll-particles"></canvas></div>
 </header>
 
 <section id="about" class="about">
@@ -376,7 +376,7 @@ section{padding:140px 0;position:relative}
       <p class="contact-sub">从前沿创意到落地执行 · 我们已准备好为您的舞台注入灵魂</p>
       <a class="contact-btn" href="#top">回到顶部 ↑</a>
       <div class="contact-mark">
-        <img src="assets/brand/logo-primary.jpg" alt="锐志">
+        <img src="assets/brand/logo-4-white.png" alt="锐志">
       </div>
     </div>
   </div>
@@ -386,7 +386,7 @@ section{padding:140px 0;position:relative}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/brand/logo-2.png" alt="锐志" class="footer-logo">
+        <img src="assets/brand/logo-1-original.png" alt="锐志" class="footer-logo">
         <div class="footer-name">四川锐志文化传播有限公司</div>
         <div class="footer-en">SICHUAN RUIZHI CULTURAL COMMUNICATION CO., LTD.</div>
       </div>
@@ -843,6 +843,94 @@ window.addEventListener('scroll', updateNav, {passive:true});
 updateNav();
 
 /* ========== 启动 ========== */
+
+/* ========== Hero 倒三角粒子带 ========== */
+(function(){
+  const c = document.getElementById('heroParticles');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  const dpr = devicePixelRatio || 1;
+  c.width = c.offsetWidth * dpr;
+  c.height = c.offsetHeight * dpr;
+  ctx.scale(dpr, dpr);
+  const W0 = c.offsetWidth, H0 = c.offsetHeight;
+
+  // 倒三角形顶点（▼ 朝下，尖端在底部中心）
+  const A = [W0 * 0.04, H0 * 0.04];          // 左上
+  const B = [W0 * 0.96, H0 * 0.04];          // 右上
+  const C = [W0 * 0.50, H0 * 0.96];          // 尖端（朝下）
+
+  // 归一化路径：t∈[0,0.5] 走 A→C（左边斜线），t∈[0.5,1] 走 B→C（右边斜线）
+  function posOnTriangle(t){
+    if(t < 0.5){
+      const u = t / 0.5;
+      return [A[0] + (C[0]-A[0])*u, A[1] + (C[1]-A[1])*u];
+    } else {
+      const u = (t - 0.5) / 0.5;
+      return [B[0] + (C[0]-B[0])*u, B[1] + (C[1]-B[1])*u];
+    }
+  }
+
+  // 粒子
+  const particles = Array.from({length:48}, () => ({
+    t: Math.random(),
+    speed: 0.0014 + Math.random() * 0.0014,
+    size: 0.6 + Math.random() * 0.7,
+    alpha: 0.55 + Math.random() * 0.45
+  }));
+
+  // 沿路径的切线（垂直方向用于轨迹宽度）
+  function tangent(t){
+    const eps = 0.001;
+    const [x1,y1] = posOnTriangle(Math.max(0, t-eps));
+    const [x2,y2] = posOnTriangle(Math.min(1, t+eps));
+    const dx = x2-x1, dy = y2-y1;
+    const len = Math.hypot(dx,dy) || 1;
+    return [-dy/len, dx/len];
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W0,H0);
+
+    // 画倒三角形轮廓（金色细线，淡）
+    ctx.save();
+    ctx.strokeStyle = 'rgba(201,169,110,0.25)';
+    ctx.lineWidth = 1;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.beginPath();
+    ctx.moveTo(A[0], A[1]);
+    ctx.lineTo(C[0], C[1]);
+    ctx.lineTo(B[0], B[1]);
+    ctx.stroke();
+    ctx.restore();
+
+    // 画粒子（沿斜边流动，端点淡入淡出）
+    for(const p of particles){
+      p.t += p.speed;
+      if(p.t > 1) p.t -= 1;
+      const [x,y] = posOnTriangle(p.t);
+      const [nx,ny] = tangent(p.t);
+      const wobble = Math.sin(p.t*Math.PI*8 + p.t*13)*0.8;
+      const px = x + nx * wobble;
+      const py = y + ny * wobble;
+
+      // 端点淡入淡出
+      const fadeIn = Math.min(1, p.t / 0.06);
+      const fadeOut = Math.min(1, (1 - p.t) / 0.06);
+      const a = Math.min(fadeIn, fadeOut) * p.alpha;
+
+      // 中心点（无外发光）
+      ctx.fillStyle = `rgba(232,200,135,${a})`;
+      ctx.beginPath();
+      ctx.arc(px,py,p.size,0,Math.PI*2);
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
 renderCases();
 renderHonor();
 window.addEventListener('load',()=>{
